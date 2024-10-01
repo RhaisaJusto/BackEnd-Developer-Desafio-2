@@ -1,0 +1,53 @@
+### ! Obter todos
+GET http://localhost:8080/api/produtos
+
+### ! Obter por id
+GET http://localhost:8080/api/produtos/1
+
+### ! Adicionar
+POST http://localhost:8080/api/produtos
+Content-Type: application/json
+
+# {
+#     "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+#     "nome": "Harry Potter",
+#     "observacao": "Livro",
+#     "quantidadeEstoque": 15,
+#     "valor": 37.0
+# },
+# {
+#     "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+#     "nome": "Harry Potter 2",
+#     "observacao": "Livro 2",
+#     "quantidadeEstoque": 15,
+#     "valor": 37.0
+# },
+# {
+#     "nome": "Acer Nitro 5",
+#     "valor": 3700.0,
+#     "quantidadeEstoque": 5,
+#     "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+#     "observacao": "Core i5, RAM 8GB, Nvidia GeForce GTX 1050"
+# },
+{
+    "nome": "Nokia",
+    "valor": 100.0,
+    "quantidadeEstoque": 1,
+    "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+    "observacao": "Tijoção"
+}
+
+### ! Atualizar
+PUT http://localhost:8080/api/produtos/1
+Content-Type: application/json
+
+{
+    "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+    "nome": "Harry Potter",
+    "observacao": "Livro",
+    "quantidadeEstoque": 15,
+    "valor": 37.0
+}
+
+### ! Deletar
+DELETE http://localhost:8080/api/produtos/3
